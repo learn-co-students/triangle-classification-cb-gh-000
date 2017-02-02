@@ -12,7 +12,7 @@ class Triangle
 
   def kind
     min, min2, max = [@a, @b, @c].sort
-    if @a < 0 || @b < 0 || @c < 0 || min + min2 <= max
+    if min < 0 ||  min + min2 <= max
       raise TriangleError
     end
 
