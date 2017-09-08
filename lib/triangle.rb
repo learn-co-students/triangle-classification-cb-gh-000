@@ -10,6 +10,8 @@ class Triangle
 
   # returns :equilateral, :isosceles, or :scalene
   # raises a TriangleError if the triangle is invalid
+  # a nice refactor would be to have #validate_triangle as a separate
+  # helper function. Official solution v slick...
   def kind
     if (@l_1 + @l_2 <= @l_3) || (@l_2 + @l_3 <= @l_1) || (@l_1 + @l_3 <= @l_2)
       raise TriangleError
