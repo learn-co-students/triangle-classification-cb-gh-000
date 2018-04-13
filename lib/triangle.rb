@@ -9,11 +9,11 @@ class Triangle
   end
 
   def kind
-    if @side1.class != "Fixnum" || @side2.class != "Fixnum" || @side3.class != "Fixnum"
+    if @side1 <= 0 || @side2 <= 0 || @side3 <= 0
       raise TriangleError
     end
 
-    if @size1 < 0 || @size2 < 0 || @size3 < 0
+    if @side1 + @side2 <= @side3 || @side1 + @side3 <= @side2 || @side2 + @side3 <= @side1
       raise TriangleError
     end
 
