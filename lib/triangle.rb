@@ -1,7 +1,10 @@
 class Triangle
   attr_accessor :length_side1, :length_side2, :length_side3
   
-  def initialize()
+  def initialize(length_side1, length_side2, length_side3)
+    @length_side1 = length_side1
+    @length_side2 = length_side2
+    @length_side3 = length_side3
   end
   
   def kind 
@@ -9,8 +12,11 @@ class Triangle
       return :equilateral
     elsif @length_side1 == @length_side2 || @length_side1 == @length_side3 || @length_side3 == @length_side2
       return :isosceles
-    elsif 
-    return :scalene
+    else
+      return :scalene
     end
   end
+
+class TriangleError < StandardError
+end
 end
