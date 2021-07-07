@@ -1,6 +1,6 @@
 # Triangle
 
-## Objectives
+## Objecftives
 
 1.  Define a custom error and use it.
 
